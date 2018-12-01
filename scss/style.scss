@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300');
+
+@font-face {
+    font-family: 'miso';
+    src: url('../fonts/miso.woff2') format('woff2'),
+         url('../fonts/miso.woff') format('woff'),
+         url('../fonts/miso.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+	box-sizing: border-box;
+}
+html{
+	font-size: 10px;
+	height: 100%;
+}
+body{
+	font-size: 1.4rem;
+	min-height: 100%;
+	line-height: 1.6;
+	background-color: #fdde7e;
+	font-family: 'Lato', sans-serif;
+	overflow: hidden;
+	color: #333333;
+}
+.container{
+    max-width: 1140px;
+    margin: 130px auto;
+ 
+}
+.flex-items {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.flex-item {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 90px;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px #999;
+	transition: all .4s ease-in;
+	height: 80%;
+	&:hover,
+	&:active,
+	&:focus {
+		transform: scale(1.05);
+	}
+	&--bg {
+		padding: 80px 100px;
+	}
+	&__price {
+		color: #02995b;
+		font-size: 5.5rem;
+		font-family: 'miso', sans-serif;
+		font-weight: bold;
+		line-height: 1;
+		padding-bottom: 10px;
+		&:before {
+			content: attr(data-currency);
+		}
+	}
+	&__img {}
+	&__title {
+		font-size: 4rem;
+		font-family: 'miso', sans-serif;
+	}
+	&__info {
+		max-width: 100px;
+		text-align: center; 
+		max-height: 60px;
+		overflow: hidden;
+		span {
+			&:before {
+				content: attr(data-currency);
+			}
+		}
+	}
+}
